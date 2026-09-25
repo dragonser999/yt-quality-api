@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/api/ytmp4",
+      "destination": "/api/ytmp4.js"
+    }
+  ]
+}
