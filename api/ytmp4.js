@@ -26,7 +26,7 @@ module.exports = async (req, res) => {
     // പാരാലൽ ആയി റീക്വസ്റ്റുകൾ അയക്കുന്നു (Vercel Timeout ഒഴിവാക്കാൻ Timeout 8 സെക്കന്റ് ആക്കിയിട്ടുണ്ട്)
     const requests = QUALITIES.map(async (resolusi) => {
       try {
-        const apiUrl = `https://api.nexray.eu.cc/downloader/v1/ytmp4?url=${encodeURIComponent(url)}&resolusi=${resolusi}`;
+        const apiUrl = `https://apiziaul.vercel.app/api/downloader/ytmp4?url=${encodeURIComponent(url)}&resolusi=${resolusi}`;
         const response = await axios.get(apiUrl, { timeout: 8000 });
 
         if (response.data && response.data.status && response.data.result?.url) {
